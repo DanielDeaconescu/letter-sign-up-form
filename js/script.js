@@ -24,7 +24,7 @@ const measureWidth = function () {
   } else {
     theImage.setAttribute(
       "src",
-      "../assets/images/illustration-sign-up-desktop.svg"
+      "./assets/images/illustration-sign-up-desktop.svg"
     );
   }
 };
