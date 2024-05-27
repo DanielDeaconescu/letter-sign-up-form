@@ -19,7 +19,7 @@ const measureWidth = function () {
   if (screenWidth <= 576) {
     theImage.setAttribute(
       "src",
-      "../assets/images/illustration-sign-up-mobile.svg"
+      "./assets/images/illustration-sign-up-mobile.svg"
     );
   } else {
     theImage.setAttribute(
