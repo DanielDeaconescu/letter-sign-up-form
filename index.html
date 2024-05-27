@@ -3,8 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
-
+    <!-- Roboto Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- favicon -->
     <link
       rel="icon"
       type="image/png"
@@ -13,10 +19,81 @@
     />
 
     <title>Newsletter sign-up form with success message</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
+    <main class="newsletter-card">
+      <!-- Initial state -->
+      <div class="container">
+        <div class="newsletter-card-initial row">
+          <div class="info-side col-md-6">
+            <h1 class="newsletter-title">Stay updated!</h1>
+            <p class="newsletter-paragraph">
+              Join 60,000+ product managers receiving monthly updates on:
+            </p>
+            <ul class="newsletter-list">
+              <li>Product discovery and building what matters</li>
+              <li>Measuring to ensure updates are a success</li>
+              <li>And much more!</li>
+            </ul>
+            <div class="info-validation">
+              <p class="newsletter-email-address">Email address</p>
+              <p class="validation-message display-none">
+                Valid email required
+              </p>
+            </div>
+
+            <form>
+              <div class="email-container">
+                <input
+                  class="email-address-input"
+                  type="email"
+                  placeholder="email@company.com"
+                  required
+                />
+              </div>
+              <div class="subscribe-container">
+                <a class="subscribe-btn" href="#"
+                  >Subscribe to monthly newsletter</a
+                >
+              </div>
+            </form>
+          </div>
+          <div class="image-side col-md-6">
+            <img
+              class="image-side-inner"
+              src="assets/images/illustration-sign-up-desktop.svg"
+              alt="tab images"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- After submission -->
+
+      <div class="newsletter-card-success display-none">
+        <img
+          class="checkmark-image"
+          src="assets/images/icon-success.svg"
+          alt=""
+        />
+        <h2 class="success-message">Thanks for subscribing!</h2>
+        <p class="success-paragraph">
+          A confirmation email has been sent to
+          <strong class="confirmation-email">ash@loremcompany.com</strong>
+          . Please open it and click the button inside to confirm your
+          subscription.
+        </p>
+        <a class="dismiss-message" href="#">Dismiss message</a>
+      </div>
+    </main>
+
+    <!-- Bootstrap JS -->
+    <script src="js/bootstrap.bundle.min.js"></script>
     <!-- Custom JS -->
     <script src="js/script.js"></script>
   </body>

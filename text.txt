@@ -21,3 +21,6 @@
   Please open it and click the button inside to confirm your subscription.
 
   Dismiss message
+
+mobile-top-img-height: 282px (33vh)
+total height: 840px
