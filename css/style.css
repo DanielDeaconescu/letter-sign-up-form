@@ -111,7 +111,7 @@ body {
 }
 
 .email-address-input:focus {
-  border: 2px solid var(--primary-tomato);
+  border: 2px solid var(--neutral-dark-slate-grey);
   outline: none;
 }
 

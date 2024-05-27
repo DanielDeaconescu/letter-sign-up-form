@@ -55,6 +55,14 @@ const toggleSuccessInitial = function () {
 
   // clear the input
   emailAdressInput.value = "";
+  // remove error calss and error message
+  if (
+    emailAdressInput.classList.contains("error-class") &&
+    !validationMessage.classList.contains("display-none")
+  ) {
+    emailAdressInput.classList.remove("error-class");
+    validationMessage.classList.add("display-none");
+  }
 };
 
 // validate email function
@@ -84,3 +92,17 @@ subscribeButton.addEventListener("click", function (event) {
 });
 
 dismissMessageButton.addEventListener("click", toggleSuccessInitial);
+
+// subscribe by hitting "enter"
+
+emailAdressInput.addEventListener("keydown", function (event) {
+  const pressedKey = event.key;
+  if (pressedKey === "Enter") {
+    event.preventDefault();
+    // checking if the field is left empty
+    if (emailAdressInput.value === "") {
+      throwError();
+    } // check if the email address is formated correctly
+    validateEmail(emailAdressInput.value);
+  }
+});
